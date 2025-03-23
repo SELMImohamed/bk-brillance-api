@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 // Route pour mettre à jour content.js
 const updateRoute = require("./routes/update");
-app.use("/api/update", updateRoute);
+app.use("/api/update", require("./routes/update"));
 
 // Lancer le serveur
 app.listen(PORT, () => {
